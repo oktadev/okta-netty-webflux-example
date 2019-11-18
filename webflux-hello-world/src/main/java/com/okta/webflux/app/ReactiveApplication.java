@@ -1,4 +1,4 @@
-package com.okta.webflux.App;
+package com.okta.webflux.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
