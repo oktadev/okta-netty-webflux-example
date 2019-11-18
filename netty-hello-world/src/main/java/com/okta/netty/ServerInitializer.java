@@ -9,11 +9,11 @@ import io.netty.handler.codec.http.HttpServerCodec;
 public class ServerInitializer extends ChannelInitializer<Channel> {
 
     @Override
-    protected void initChannel(Channel ch) throws Exception {
+    protected void initChannel(Channel ch) {
         ChannelPipeline pipeline = ch.pipeline();
         pipeline.addLast(new HttpServerCodec());
         pipeline.addLast(new HttpObjectAggregator(Integer.MAX_VALUE));
         pipeline.addLast(new ServerHandler());
     }
-    
+
 }

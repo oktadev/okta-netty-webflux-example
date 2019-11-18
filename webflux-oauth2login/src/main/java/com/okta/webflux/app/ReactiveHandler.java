@@ -17,5 +17,5 @@ public class ReactiveHandler {
             .contentType(MediaType.TEXT_PLAIN)
             .body(BodyInserters.fromObject("Hello world!"));
     }
-    
+
 }

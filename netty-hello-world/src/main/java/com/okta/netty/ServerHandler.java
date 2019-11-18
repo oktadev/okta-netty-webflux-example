@@ -7,11 +7,10 @@ import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.http.*;
 import io.netty.util.CharsetUtil;
 
-
 public class ServerHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
-    
+
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, FullHttpRequest msg) throws Exception {
+    protected void channelRead0(ChannelHandlerContext ctx, FullHttpRequest msg) {
         ByteBuf content = Unpooled.copiedBuffer("Hello World!", CharsetUtil.UTF_8);
         FullHttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK, content);
         response.headers().set(HttpHeaderNames.CONTENT_TYPE, "text/html");
@@ -19,5 +18,5 @@ public class ServerHandler extends SimpleChannelInboundHandler<FullHttpRequest> 
         ctx.write(response);
         ctx.flush();
     }
-    
+
 }
