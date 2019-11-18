@@ -1,4 +1,4 @@
-package com.okta.webflux.App;
+package com.okta.webflux.app;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
