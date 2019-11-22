@@ -1,4 +1,4 @@
-package com.okta.webflux.App;
+package com.okta.webflux.app;
 
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
