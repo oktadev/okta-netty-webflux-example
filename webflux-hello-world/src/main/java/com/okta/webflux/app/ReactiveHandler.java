@@ -15,7 +15,7 @@ public class ReactiveHandler {
         return ServerResponse
             .ok()
             .contentType(MediaType.TEXT_PLAIN)
-            .body(BodyInserters.fromObject("Hello world!"));
+            .body(BodyInserters.fromValue("Hello world!"));
     }
     
 }
